@@ -102,6 +102,8 @@ class DischargingController extends Controller
                 'Nopol'           => $row->Nopol ?? null,
                 'No_Lambung'      => $row->No_Lambung ?? null,
                 'Keterangan'      => $row->Keterangan ?? null,
+                'alat'            => $row->alat ?? null,
+                'operator'        => $row->operator ?? null,
                 'tgl_gateout'     => now(),
             ]);
         } else {
@@ -124,6 +126,8 @@ class DischargingController extends Controller
                 'Nopol'           => $row->Nopol ?? null,
                 'No_Lambung'      => $row->No_Lambung ?? null,
                 'Keterangan'      => $row->Keterangan ?? null,
+                'alat'            => $row->alat ?? null,
+                'operator'        => $row->operator ?? null,
                 'TGL_GTI'         => $row->TGL_GTI ?? now(),
                 'tgl_gateout'     => now(),
             ]);

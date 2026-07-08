@@ -121,17 +121,7 @@ class TallyController extends Controller
             'operator'      => $operator,
         ]);
 
-        // Insert ke dc_gateout dengan data yang sudah bersih
-        DB::table('dc_gateout')->insert([
-            'NO_CTR'          => trim($request->no_container),
-            'No_Lambung'      => $lambung_val,
-            'NM_KAPAL'        => $kapal,
-            'alat'            => $alat,
-            'operator'        => $operator,
-            'TGL_GTI'         => now(),
-            'STATUS_VALUE'    => $row->STATUS_VALUE ?? '-',
-            'STATUS_GATEOUT'  => 'Belum'
-        ]);
+
 
         return redirect()->route('discharging')->with('success', 'Data berhasil dikonfirmasi & masuk Discharging!');
     }
